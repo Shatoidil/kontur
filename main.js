@@ -44,8 +44,7 @@ $(document).ready(function() {
         }
     
     });
-    
-    
+       
     $('#citiesResult').on('click', '.result', function(){
         $('#cityInput').val($(this).text());
         showOrHide(false);
