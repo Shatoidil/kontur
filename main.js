@@ -29,7 +29,7 @@ $(document).ready(function() {
         showOrHide(true);
         for (let i = 0; i < search.length; i++) {
           $("#citiesResult").append(
-            '<a class="result">' +
+            '<a city_id="' + search[i].Id + '" class="result">' +
               '<div class="content"><div class="title">' +
               search[i].City +
               "</div></div></a>"
@@ -42,7 +42,7 @@ $(document).ready(function() {
   });
 
   $("#citiesResult").on("click", ".result", function() {
-    $("#cityInput").val($(this).text());
+    $("#cityInput").val($(this).text()).attr('city_id', $(this).closest('a').attr('city_id'));
     showOrHide(false);
   });
 
