@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css' />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script>
+
     <title>Document</title>
 </head>
+
 <body>
     <div class="ui search">
         <div class="ui icon input">
-          <input id="cityInput" class="prompt" type="text" placeholder="Выберите город...">
-          <i class="search icon"></i>
+            <input id="cityInput" class="prompt" type="text" placeholder="Выберите город...">
+            <i class="search icon"></i>
+
         </div>
-        <div id="citiesResult" class="results transition hidden">
+        <div class="results hidden">
         </div>
-      </div>
-      
+    </div>
+
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js'></script>
 
 
-    <script src="main.js"></script>
+    <script src="main2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cityInput').autoSearch({
+                url: "https://rawgit.com/Shatoidil/kontur/master/kladr.json"
+            });
+        });
+    </script>
+
 </body>
+
 </html>
